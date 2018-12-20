@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head><title></title>
+    <script type ="text/javascript">
+        function Calcu1()
+        {
+            var age = document.getElementById('age').value;
+            var HRmax = 205.8 - (0.685 * age)
+            document.getElementById('HRmax').value = HRmax;
+        }
+        function Calcu2()
+        {
+            var HRmax = document.getElementById('HRmax').value;
+            var HRrest = document.getElementById('HRrest').value;
+            var VO2max = 15 * (HRmax / HRrest)
+            document.getElementById('VO2max').value = VO2max;
+        }
+        function Calcu3()
+        {
+            var weight = document.getElementById('weight').value;
+            var height = document.getElementById('height').value;
+            var BMI = weight / (height / 100) ^ 2
+            document.getElementById('BMI').value = BMI;
+        }
+        function Calcu4()
+        {
+            var weight = document.getElementById('weight').value;
+            var height = document.getElementById('height').value;
+            var MenBMI = 0.5 * weight / (height / 100) ^ 2 + 11.5
+            document.getElementById('MenBMI').value = MenBMI;
+        }
+        function Calcu5()
+        {
+            var age = document.getElementById('age').value;
+            var weight = document.getElementById('weight').value;
+            var height = document.getElementById('height').value;
+            var FemaleBMI = 0.5 * weight / (height / 100) ^ 2 + 0.03 * age + 11;
+            document.getElementById('FemaleBMI').value = FemaleBMI;
+        }
+    </script>
+    <style type ="text/css">
+
+    </style>
+</head>
+<body>
+    <form action ="APPLICATION2.html">
+        <table style="border:dashed">
+            <tr>
+                <td>
+                    Name:<input type ="text" id =""/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Surname:<input type ="text" id =""/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ID number:<input type ="text" id =""/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Join Date:<input type ="text" id =""/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Phone number:<input type ="text" id =""/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Male:<input type ="checkbox" id =""/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Female:<input type ="checkbox" id =""/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Premium:<input type ="radio" id =""/>Standard:<input type ="radio" id =""/>Basic:<input type ="radio" id =""/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type ="button" value ="Capture" onclick ="" />
+                </td>
+            </tr>
+        </table>
+        <table style ="border:dotted">
+            <tr>
+                <td>
+                    Name:<input type ="text" id ="" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Surname:<input type ="text" id ="" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Age:<input type ="text" id ="age" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    HRmax:<input type ="text" id ="HRmax" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    HRrest:<input type ="text" id ="HRrest" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    VO2max:<input type ="text" id ="VO2max" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type ="button" value ="Calculate" onclick ="Calcu1()" />
+                    <input type ="button" value ="Convert to VO2max" onclick ="Calcu2()" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
